@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import capitalizeFirstLetter from "../../../../lib/capitalizeFirstLetter";
 
 type menuItem = {
     name: string;
@@ -21,7 +20,7 @@ export default function Navbar(){
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="py-8 px-12 fixed top-0 w-full">
+        <header className="py-8 px-12 fixed top-0 w-full bg-white">
             <div className="header__content flex items-center justify-between">
                 <Link href={"/"}><Image src={`/images/logo.png`} alt="logo" width="104" height="45" /></Link>
 

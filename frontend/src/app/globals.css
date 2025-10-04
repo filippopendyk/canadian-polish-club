@@ -8,3 +8,12 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.noto-serif{
+  font-family: var(--font-noto-serif), serif !important;
+}
+
+.red-theme{
+  background-color: #842A2A;
+  color: white;
+}

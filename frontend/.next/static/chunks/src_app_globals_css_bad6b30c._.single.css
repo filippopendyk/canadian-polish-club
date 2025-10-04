@@ -10,6 +10,7 @@
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
+      --tw-font-weight: initial;
       --tw-shadow: 0 0 rgba(0, 0, 0, 0);
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
@@ -36,6 +37,7 @@
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
+      --tw-font-weight: initial;
       --tw-shadow: 0 0 rgba(0, 0, 0, 0);
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
@@ -67,6 +69,9 @@
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --radius-3xl: 1.5rem;
     --default-transition-duration: .15s;
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     --default-font-family: var(--font-sans);
@@ -454,6 +459,34 @@
     z-index: 50;
   }
 
+  .m-4 {
+    margin: calc(var(--spacing) * 4);
+  }
+
+  .m-auto {
+    margin: auto;
+  }
+
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
+
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
+
+  .mt-16 {
+    margin-top: calc(var(--spacing) * 16);
+  }
+
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
+
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
+
   .flex {
     display: flex;
   }
@@ -474,11 +507,23 @@
     width: calc(var(--spacing) * 6);
   }
 
+  .w-32 {
+    width: calc(var(--spacing) * 32);
+  }
+
+  .w-40 {
+    width: calc(var(--spacing) * 40);
+  }
+
+  .w-44 {
+    width: calc(var(--spacing) * 44);
+  }
+
   .w-64 {
     width: calc(var(--spacing) * 64);
   }
 
-  .w-full {
+  .w-\[100\%\], .w-full {
     width: 100%;
   }
 
@@ -503,16 +548,36 @@
     justify-content: space-between;
   }
 
+  .justify-center {
+    justify-content: center;
+  }
+
   .gap-1 {
     gap: calc(var(--spacing) * 1);
+  }
+
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
   }
 
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
 
+  .self-center {
+    align-self: center;
+  }
+
   .self-end {
     align-self: flex-end;
+  }
+
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
+
+  .bg-\[\#F4AD13\] {
+    background-color: #f4ad13;
   }
 
   .bg-black {
@@ -523,16 +588,48 @@
     background-color: var(--color-white);
   }
 
+  .bg-\[url\(\/images\/hero-img\.png\)\] {
+    background-image: url("/images/hero-img.png");
+  }
+
+  .bg-cover {
+    background-size: cover;
+  }
+
   .p-6 {
     padding: calc(var(--spacing) * 6);
+  }
+
+  .p-13 {
+    padding: calc(var(--spacing) * 13);
+  }
+
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+
+  .px-7 {
+    padding-inline: calc(var(--spacing) * 7);
+  }
+
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
   }
 
   .px-12 {
     padding-inline: calc(var(--spacing) * 12);
   }
 
+  .py-1\.5 {
+    padding-block: calc(var(--spacing) * 1.5);
+  }
+
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
+  }
+
+  .text-center {
+    text-align: center;
   }
 
   .text-2xl {
@@ -545,9 +642,43 @@
     line-height: var(--tw-leading, var(--text-lg--line-height));
   }
 
+  .text-\[20px\] {
+    font-size: 20px;
+  }
+
+  .text-\[32px\] {
+    font-size: 32px;
+  }
+
+  .text-\[40px\] {
+    font-size: 40px;
+  }
+
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .text-black {
+    color: var(--color-black);
+  }
+
+  .text-white {
+    color: var(--color-white);
+  }
+
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgba(0, 0, 0, .1)), 0 4px 6px -4px var(--tw-shadow-color, rgba(0, 0, 0, .1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
+  .filter-\[20px\] {
+    filter: 20px;
   }
 
   .transition-transform {
@@ -589,6 +720,19 @@ body {
   box-sizing: border-box;
 }
 
+.noto-serif {
+  font-family: var(--font-noto-serif), serif !important;
+}
+
+.red-theme {
+  color: #fff;
+  background-color: #842a2a;
+}
+
+.red-theme > * {
+  color: #fff;
+}
+
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
@@ -628,6 +772,11 @@ body {
 }
 
 @property --tw-skew-y {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-font-weight {
   syntax: "*";
   inherits: false
 }
